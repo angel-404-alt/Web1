@@ -1,0 +1,59 @@
+:root{
+       --color-primario: hsl(0, 0%, 10%);
+       --color-secundario: hsl(0, 0%, 100%);
+       --color-fondo-suave: hsl(0, 0%, 95%);
+       --color-acento: hsl(240, 70%, 50%);
+       --color-texto: hsl(0, 0%, 15%);
+       --transicion: all 0.3s ease;
+}
+
+*{
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+}
+
+body{
+       background-color: var(--color-fondo-suave);
+       font-family: "segou UI", Roboto, Helvetica, Arial, sans-serif;
+       display: flex;
+       flex-direction: column;
+       min-width: 100vh;
+       color: var(--color-texto);
+       line-height: 1.6;
+}
+
+header{
+       background-color: var(--color-primario);
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+       position: sticky;
+       top: 0;
+       z-index: 1000;
+}
+
+nav{
+       max-width: 1200px;
+       padding: 10px 20px;
+       margin: 0 auto;
+}
+
+nav ul{
+       display: flex;
+       justify-content: center;
+       gap: 30px;
+       list-style: none;
+}
+
+nav ul li a{
+       text-decoration: none;
+       color: var(--color-secundario);
+       font-weight: 500;
+       font-size: 1rem;
+       text-transform: uppercase;
+       letter-spacing: 1px;
+       transition: var(--transicion);
+}
+
+nav ul li a:hover{
+       color: var(--color-acento);
+}
